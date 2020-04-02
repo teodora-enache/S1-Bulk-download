@@ -1,0 +1,9 @@
+#First, make sure that you have the credentials for the Copernicus Open Access Hub (username, password).
+#Install Anaconda and the sentinelsat module.
+#https://anaconda.org/
+
+pip install sentinelsat
+
+cd /path/to/directory/where/you/want/to/download/the/images
+
+sentinelsat -u username -p password -g "path/to/subset/file/generated/in/WG84/.geojson" -s startingDate -e endDate -d --producttype GRD --url "https://scihub.copernicus.eu/dhus"
